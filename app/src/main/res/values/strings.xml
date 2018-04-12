@@ -23,5 +23,12 @@
         <item>magenta</item>
     </string-array>
     <string name="auto_complete_hint">Choose a color</string>
+    <string name="radioYes">Yes</string>
+    <string name="radioNo">No</string>
+    <string name="toppingMeat">meat</string>
+    <string name="toppingCheese">cheese</string>
+    <string name="toppingVegitables">vegetables</string>
+    <string name="toppingSauce">sauce</string>
+
     <string name="hello_blank_fragment">HOME</string>
 </resources>
