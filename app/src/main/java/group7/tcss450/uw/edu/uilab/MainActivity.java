@@ -94,6 +94,8 @@ public class MainActivity extends AppCompatActivity
             loadFragment(new EditTextFragment());
         } else if (id == R.id.nav_autocomplete) {
             loadFragment(new AutoCompleteTextFragment());
+        } else if (id == R.id.nav_spinner_example) {
+            loadFragment(new SpinnerFragment());
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -15,4 +15,9 @@
         android:id="@+id/nav_autocomplete"
         android:title="AutoComplete Example"
         android:icon="@drawable/ic_space_bar_black_24dp" />
+    <item
+        android:id="@+id/nav_spinner_example"
+        android:title="Spinner Example"
+        android:icon="@drawable/ic_spinner"
+         />
 </menu>
