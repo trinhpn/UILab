@@ -91,6 +91,8 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_text_view) {
             loadFragment(new TextViewFragment());
+        } else if (id == R.id.nav_edit_text) {
+            loadFragment(new EditTextFragment());
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

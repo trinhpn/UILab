@@ -10,7 +10,7 @@
     <string name="text_view_ex1">Hello All</string>
     <string name="text_view_ex_phone">253 123 4567</string>
     <string name="text_view_ex_email">myunetid@uw.edu</string>
-
+    <string name="edit_view_hint">type something!</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
