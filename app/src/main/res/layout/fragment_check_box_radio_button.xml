@@ -10,7 +10,9 @@
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/customborder"
         android:orientation="horizontal">
 
         <RadioButton
@@ -28,27 +30,43 @@
             android:text="@string/radioNo" />
     </RadioGroup>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="@dimen/activity_vertical_margin">
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="@drawable/customborder"
+        android:orientation="vertical">
+
         <CheckBox
+            android:id="@+id/cbCheese"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/toppingCheese" />
+
         <CheckBox
+            android:id="@+id/cbMeat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/toppingMeat" />
+
         <CheckBox
+            android:id="@+id/cbSauce"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/toppingSauce" />
+
         <CheckBox
+            android:id="@+id/cbVeggies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/toppingVegitables" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/toppingVegitables" />
-    </LinearLayout>
+        android:baselineAligned="false"
+        android:text="@string/submitButton"
+        />
 </LinearLayout>

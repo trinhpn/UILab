@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.view.MenuInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -21,6 +22,16 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if(savedInstanceState == null) {
+            if (findViewById(R.id.fragmentContainer) != null) {
+                getSupportFragmentManager().beginTransaction()
+                        .add(R.id.fragmentContainer, new HomeFragment())
+                        .commit();
+            }
+        }
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -60,12 +71,12 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+//    @Override
+  //  public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
+    //    getMenuInflater().inflate(R.menu.main, menu);
+      //  return true;
+   // }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -78,7 +89,10 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.action_settings) {
             return true;
         }
-
+        else if (id == R.id.my_menu)  {
+            loadFragment(new HomeFragment());
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -96,11 +110,18 @@ public class MainActivity extends AppCompatActivity
             loadFragment(new AutoCompleteTextFragment());
         } else if (id == R.id.nav_spinner_example) {
             loadFragment(new SpinnerFragment());
+        } else if (id == R.id.nav_radiobutton_example) {
+            loadFragment(new CheckBoxRadioButtonFragment());
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.my_menu, menu);
+        return true;
+    }
 }

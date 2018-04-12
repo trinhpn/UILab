@@ -20,4 +20,9 @@
         android:title="Spinner Example"
         android:icon="@drawable/ic_spinner"
          />
+    <item
+        android:icon="@drawable/ic_check"
+        android:id="@+id/nav_radiobutton_example"
+        android:title="Radio and Check box Example"
+        />
 </menu>

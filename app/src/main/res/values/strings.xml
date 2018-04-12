@@ -22,6 +22,7 @@
         <item>cyan</item>
         <item>magenta</item>
     </string-array>
+    <string name="submitButton">SUBMIT</string>
     <string name="auto_complete_hint">Choose a color</string>
     <string name="radioYes">Yes</string>
     <string name="radioNo">No</string>
