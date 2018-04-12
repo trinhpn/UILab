@@ -23,4 +23,5 @@
         <item>magenta</item>
     </string-array>
     <string name="auto_complete_hint">Choose a color</string>
+    <string name="hello_blank_fragment">HOME</string>
 </resources>

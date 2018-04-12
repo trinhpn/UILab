@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 
 
 /**
@@ -22,8 +24,17 @@ public class AutoCompleteTextFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_auto_complete_text, container, false);
+        View v = inflater.inflate(R.layout.fragment_auto_complete_text, container, false);
+        final String[] COLORS = getResources().getStringArray(R.array.auto_complete_colors);
+        ArrayAdapter<String> adapter =
+                new ArrayAdapter<String>(getActivity(),
+                        android.R.layout.simple_dropdown_item_1line,
+                        COLORS);
+        AutoCompleteTextView text = (AutoCompleteTextView) v.findViewById(R.id.autoCompleteTextView);
+        text.setAdapter(adapter);
+
+        return v;
+
     }
 
 }
